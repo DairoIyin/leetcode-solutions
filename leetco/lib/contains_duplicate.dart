@@ -2,14 +2,13 @@
 
 class Solution {
   bool containsDuplicate(List<int> nums) {
-      //convert nums to a unique array
-      var uniqueNums=[...{...nums}];
-    var numsSum = nums.reduce((numsSum,item)=>numsSum+=item);
-  var uniqueNumsSum = uniqueNums.reduce((uniqueNumsSum,item)=>uniqueNumsSum+=item);
-  if(numsSum==uniqueNumsSum){
+    var uniqueNums = [
+      ...{...nums}
+    ];
+    if (nums.length == uniqueNums.length) {
       return false;
-  }else{
+    } else {
       return true;
-  }
+    }
   }
 }
